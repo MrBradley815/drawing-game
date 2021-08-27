@@ -1,0 +1,107 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: lightseagreen;
+  --color-white: #ffffff;
+  --br-lg: 2.4rem;
+  --box-shadow: 0 7.5rem 10rem -5rem rgb(0 0 0 / 20%);
+}
+
+html {
+  height: 100%;
+  font-size: 62.5% !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  overflow: hidden;
+  background: var(--color-primary);
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-gap: 3.2rem;
+  max-width: 128rem;
+  height: 74vh;
+}
+
+#drawing-pad {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background: var(--color-white);
+  border-radius: var(--br-lg);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+#chat {
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  background: var(--color-white);
+  border-radius: var(--br-lg);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+#tools {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background: var(--color-white);
+  border: 0.6rem solid var(--color-white);
+  border-radius: var(--br-lg);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0.4rem;
+  max-width: 50rem;
+  height: 100%;
+  margin-left: auto;
+}
+
+.color {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.color-grey { background: #808080; }
+.color-grey-dk { background: #444444; }
+.color-grey-lt { background: #bbbbbb; }
+.color-red { background: #ff0000; }
+.color-red-dk { background: #a00000; }
+.color-red-lt { background: #ff5555; }
+.color-orange { background: #ff7f00; }
+.color-orange-dk { background: #c06000; }
+.color-orange-lt { background: #ffaa55; }
+.color-yellow { background: #ffff00; }
+.color-yellow-dk { background: #ffff00; }
+.color-yellow-lt { background: #ffff00; }
+.color-green { background: #00ff00; }
+.color-green-dk { background: #00ff00; }
+.color-green-lt { background: #00ff00; }
+.color-blue { background: #0000ff; }
+.color-blue-dk { background: #0000ff; }
+.color-blue-lt { background: #0000ff; }
+.color-indigo { background: #4b0082; }
+.color-indigo-dk { background: #4b0082; }
+.color-indigo-lt { background: #4b0082; }
+.color-violet { background: #9400d3; }
+.color-violet-dk { background: #9400d3; }
+.color-violet-lt { background: #9400d3; }
